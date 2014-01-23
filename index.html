@@ -1,21 +1,21 @@
 <html>
   <head>
-    <link rel="stylesheet" href="css/flipclock.css">
   </head>
   <body>
-    <div class="your-clock"></div>
+
+
+    <div class="timer">
+      <span class="hour">00</span>:<span class="minute">00</span>:<span class="second">00</span>
+    </div>
+
+
+    <div class="control">
+      <button onClick="timer.reset(0)">Reset</button>
+    </div>
+
 
     <script src="js/jquery.js"></script>
-    <script src="js/flipclock.js"></script>
+    <script src="js/timer.js"></script>
 
-    <script>
-
-    $( document ).ready(function() {
-        var clock = $('.your-clock').FlipClock({
-        // ... your options here
-        });
-      });
-
-    </script>
   </body>
 </html>
