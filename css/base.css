@@ -1,0 +1,22 @@
+body {
+  background: #80bca3;
+  color: #f6f6f6;
+  font-family: "Montserrat", Arial, sans-serif;
+  padding: 100px 0;
+  text-align: center; }
+
+h1 {
+  font-size: 24px; }
+
+.timer {
+  font-size: 64px;
+  margin: 50px 0; }
+
+button {
+  background: #f6f7bd;
+  border: none;
+  box-shadow: none;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 24px;
+  padding: 15px 20px;
+  text-transform: uppercase; }

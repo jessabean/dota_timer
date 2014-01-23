@@ -1,0 +1,46 @@
+@import "bourbon";
+
+// ===================================
+// Colors
+// ===================================
+
+$white:   #F6F6F6;
+$red:     #CF4647;
+$teal:    #80BCA3;
+$yellow:  #F6F7BD;
+
+// ===================================
+// Type
+// ===================================
+
+
+// ===================================
+// Base styles
+// ===================================
+
+body {
+  background: $teal;
+  color: $white;
+  font-family: "Montserrat", Arial, sans-serif;
+  padding: 100px 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.timer {
+  font-size: 64px;
+  margin: 50px 0;
+}
+
+button {
+  background: $yellow;
+  border: none;
+  box-shadow: none;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 24px;
+  padding: 15px 20px;
+  text-transform: uppercase;
+}
