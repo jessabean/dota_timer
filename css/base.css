@@ -1,3 +1,8 @@
+html,
+body {
+  margin: 0;
+  padding: 0; }
+
 body {
   background-color: #80bca3;
   background-attachment: fixed;
@@ -12,20 +17,103 @@ body {
   text-align: center; }
 
 h1 {
-  font-size: 24px; }
+  -webkit-animation: slidein 1s;
+  -moz-animation: slidein 1s;
+  animation: slidein 1s;
+  font-size: 30px;
+  margin-bottom: 40px;
+  padding: 0; }
+
+a {
+  color: #80bca3;
+  text-decoration: none; }
+  a:hover {
+    border-bottom: 2px solid #eb7b59;
+    color: #eb7b59; }
 
 .timer {
   font-size: 64px;
-  margin: 50px 0; }
+  margin-bottom: 40px; }
+
+.control-panel {
+  -webkit-animation: fadein 1s;
+  -moz-animation: fadein 1s;
+  animation: fadein 1s;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  min-width: 250px;
+  max-width: 500px;
+  padding: 40px 20px; }
 
 button {
-  background: #f6f7bd;
+  background: #80bca3;
   border: none;
   box-shadow: none;
+  color: #444444;
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 24px;
   padding: 15px 20px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out; }
+  button:hover {
+    background: #eb7b59;
+    cursor: pointer; }
+  button:active {
+    background: #c64018; }
+  button:active, button:focus {
+    outline: none; }
+
+footer {
+  background: rgba(0, 0, 0, 0.5);
+  display: block;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%; }
 
 .credits {
   font-size: 16px; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@-moz-keyframes fadein {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@keyframes slidein {
+  from {
+    margin-top: -100px; }
+
+  to {
+    margin-top: 0; } }
+
+@-moz-keyframes slidein {
+  from {
+    margin-top: -100px; }
+
+  to {
+    margin-top: 0; } }
+
+@-webkit-keyframes slidein {
+  from {
+    margin-top: -100px; }
+
+  to {
+    margin-top: 0; } }
