@@ -18,6 +18,7 @@ server.listen(PORT)
 app.use '/public', express.static("#{ROOT}/public")
 app.use '/css', express.static("#{ROOT}/css")
 app.use '/js', express.static("#{ROOT}/js")
+app.use '/img', express.static("#{ROOT}/img")
 
 app.get "/*", (req, res) ->
         res.sendfile("#{ROOT}/index.html")
