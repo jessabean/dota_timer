@@ -22,5 +22,28 @@
     <script src="js/timer.js"></script>
     <script src="js/client.js"></script>
 
+    <script>
+    $(document).ready(function() {
+      var images = new Array(
+      "img/dota-bg-1.jpg",
+      "img/dota-bg-2.jpg",
+      "img/dota-bg-3.jpg",
+      "img/dota-bg-4.jpg",
+      "img/dota-bg-5.jpg",
+      "img/dota-bg-6.jpg",
+      "img/dota-bg-7.jpg",
+      "img/dota-bg-8.jpg",
+      "img/dota-bg-9.jpg",
+      "img/dota-bg-10.jpg",
+      "img/dota-bg-11.jpg",
+      "img/dota-bg-12.jpg"
+      );
+
+      var imageItem = Math.floor(Math.random() * images.length);
+
+      $('body').css('background-image', 'url(' + images[imageItem] + ')');
+    });
+
+    </script>
   </body>
 </html>

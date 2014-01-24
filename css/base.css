@@ -1,5 +1,11 @@
 body {
-  background: #80bca3;
+  background-color: #80bca3;
+  background-attachment: fixed;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   color: #f6f6f6;
   font-family: "Montserrat", Arial, sans-serif;
   padding: 100px 0;

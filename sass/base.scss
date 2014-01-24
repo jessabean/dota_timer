@@ -19,7 +19,13 @@ $yellow:  #F6F7BD;
 // ===================================
 
 body {
-  background: $teal;
+  background-color: $teal;
+  background-attachment: fixed;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   color: $white;
   font-family: "Montserrat", Arial, sans-serif;
   padding: 100px 0;
