@@ -5,8 +5,9 @@ express  = require('express')
 path     = require('path')
 app      = express()
 redis    = require('redis')
+process  = require('process')
 PROTOCOL = "http"
-PORT     = 8090
+PORT     = process.env.PORT || 8090
 ROOT     = path.dirname(__dirname)
 
 if PROTOCOL == "http"
