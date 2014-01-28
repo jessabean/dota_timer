@@ -9,5 +9,12 @@
     "coffee-script": "~1.6.3",
     "express": "~3.4.8",
     "redis": "~0.10.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-coffee": "~0.8.2",
+    "grunt-cli": "~0.1.13",
+    "grunt": "~0.4.2",
+    "grunt-coffeelint": "0.0.8",
+    "grunt-contrib-watch": "~0.5.3"
   }
 }
