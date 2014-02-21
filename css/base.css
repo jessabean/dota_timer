@@ -76,6 +76,9 @@ footer {
 .credits {
   font-size: 16px; }
 
+.hour::after, .minute::after {
+  content: ":"; }
+
 @keyframes fadein {
   from {
     opacity: 0; }
