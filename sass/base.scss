@@ -105,6 +105,12 @@ footer {
   font-size: 16px;
 }
 
+.hour, .minute {
+  &::after {
+    content: ":";
+  }
+}
+
 
 // ===================================
 //  Animation

@@ -6,9 +6,12 @@ path     = require('path')
 app      = express()
 redis    = require('redis')
 process  = require('process')
+jade     = require('jade')
 PROTOCOL = "http"
 PORT     = process.env.PORT || 8090
 ROOT     = path.dirname(__dirname)
+
+latestTime = new Date() # we don't store it persistently
 
 if PROTOCOL == "http"
   http   = require("http")
@@ -16,20 +19,26 @@ if PROTOCOL == "http"
 
 server.listen(PORT)
 
+console.log "App started on #{PORT}"
+
 app.use '/public', express.static("#{ROOT}/public")
 app.use '/css', express.static("#{ROOT}/css")
 app.use '/js', express.static("#{ROOT}/js")
 app.use '/img', express.static("#{ROOT}/img")
 
+app.set('views', __dirname + "/../views")
+app.set('view engine', 'jade')
+
 app.get "/*", (req, res) ->
-        res.sendfile("#{ROOT}/index.html")
+  res.render 'index', {
+    latestTime: latestTime.getTime()
+  }
+  #res.sendfile("#{ROOT}/index.html")
 
 sio = io.listen(server)
 sio.enable "browser client minification"
 sio.enable "browser client gzip"
 sio.set "log level", 1
-
-latestTime = new Date()
 
 sio.sockets.on 'connection', (socket) ->
 
