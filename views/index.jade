@@ -1,0 +1,50 @@
+doctype html
+html(lang="en")
+  head
+    title Dota Timer
+    link(href='http://fonts.googleapis.com/css?family=Montserrat', rel='stylesheet', type='text/css')
+    script(src='/socket.io/socket.io.js')
+    link(rel='stylesheet', href='css/base.css')
+
+  body
+    h1 How long has it been since we've mentioned Dota?
+
+    .control
+      .timer
+        span.hour
+        span.minute
+        span.second
+
+      .actions
+        button(onClick='client.resetTimer()') Reset
+
+    footer
+      p.credits
+        Background art by <a href="http://wallbase.cc/user/id-77461">Skiboosh</a>
+
+    script(src="js/jquery.js")
+    script(src="js/timer.js")
+    script(src="js/client.js")
+    script.
+      $(document).ready(function() {
+        var images = new Array(
+        "img/dota-bg-1.jpg",
+        "img/dota-bg-2.jpg",
+        "img/dota-bg-3.jpg",
+        "img/dota-bg-4.jpg",
+        "img/dota-bg-5.jpg",
+        "img/dota-bg-6.jpg",
+        "img/dota-bg-7.jpg",
+        "img/dota-bg-8.jpg",
+        "img/dota-bg-9.jpg",
+        "img/dota-bg-10.jpg",
+        "img/dota-bg-11.jpg",
+        "img/dota-bg-12.jpg"
+        );
+
+        var imageItem = Math.floor(Math.random() * images.length);
+
+        $('body').css('background-image', 'url(' + images[imageItem] + ')');
+      });
+
+    script= "window.latestTime = new Date(" + latestTime + ");"
